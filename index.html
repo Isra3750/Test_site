@@ -4,65 +4,52 @@
  <!-- Pressing tab will auto complete -->
 <html>
 <head>
-    <title>Learning HTML by Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- link to CSS file -->
+    <title>CSS Basics</title>
 </head>
 <body>
     <div>
-        <a href ="sample.html">Go to -About- page</a> <!-- link to previous video sample HTML -->
+        <a href ="sample_basic.html">Go to sample basic page</a> <!-- link to previous video sample HTML -->
+        <br>
+        <a href ="sample_forms.html">Go to sample forms page</a> <!-- link to previous video sample HTML -->
+        <br>
+        <a href ="sample_css1.html">Go to sample css page</a> <!-- link to previous video sample HTML -->
     </div>
 
-    <h1> HTML forms </h1>
-    <form> <!-- Create form, form action is for backend script-->
-        <label for ="useranme">Enter your username: </label> <!-- link label for the input field via ID of username-->
-        <!-- This input type is for text input, id is for identifying the input (id can be added to any tags)-->
-        <input type="text" id="useranme" name="username" placeholder="Your username..." required> <!-- No other id can have the same name (username), 
-        name is for backend validation (can be used for grouping forms), required means no empty input--> 
-        <br><br>
-        
-        <!-- Create email field after line break -->
-        <label for ="email">Enter your email: </label>  <!-- show text in website -->
-        <input type="email" id="email" name="email" placeholder="Your email..." required> <!-- Allow frontend validation for email, different behavior from text -->
-        <br><br>
+    <!-- Selector, tag only one p tag instead of all in CSS, use class -->
+    <div id="content"> <!-- ID must be uqinue, one ID for div class, u can use classes instead of ID for CSS-->
+        Let's get start!!!!!!!!!!!!!!!!!!
+        <p class="error">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <p class ="success">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        <p class ="success feedback">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+    </div>
 
-        <!-- Create password field after line break -->
-        <label for ="password">Enter your password: </label> <!-- show text in website -->
-        <input type="password" id="password" name="password" placeholder="Your password..." required> <!-- Allow frontend validation for password, different behavior from text -->
-        <br><br>
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam officiis suscipit optio in illum dicta cumque perspiciatis autem reprehenderit id, 
+        provident quibusdam nemo recusandae perferendis possimus praesentium quaerat. Dolore, vitae.
+    </p>
 
-        <!-- Create radio buttons -->
-        <p>Select your age:</p>
-        <!-- name for grouping, id for identifying, value for backend validation (info to send to server side )-->
-        <input type="radio" id="option-1" name="age" value="0-18">
-        <label for="option-1">0-18</label>
-        <input type="radio" id="option-2" name="age" value="18-25">
-        <label for="option-2">18-25</label>
-        <input type="radio" id="option-3" name="age" value="25+">
-        <label for="option-3">25+</label>
-        <br><br>
+    <div class="error">
+        I am an error
+    </div>
 
-        <!-- Create select box, a dropdown list -->
-        <label for = "question"> Security question: </label> <!-- Show question in website -->
-        <select name = "question" id = "question">
-            <option value="q1">What is your favorite color?</option>
-            <option value="q2">What is your favorite animal?</option>
-            <option value="q3">What is your favorite food?</option>
-        </select>
-        <br><br>
-
-        <!-- Security question answer -->
-        <label for = "answer"> Security question answer: </label>
-        <input type="text" id="answer" name="answer">
-        <br><br>
-
-        <!-- Text area for bio, a box area really...-->
-        <label for = "bio"> Your bio: </label> <br>
-        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="About you..."></textarea>
-        <br><br>
-
-        <!-- create submit button, usually a backend script will handle this after pressing submit -->
-        <input type="submit" value="Submit the form">
-
-    </form>
+    <a href="https://www.google.com">Google</a> <!-- a is for anchor tag, links to other website -->
+    <a href="https://www.apple.com">apple</a> <!-- a is for anchor tag, links to other website -->
+    <a href="https://www.google.com">Google</a> <!-- a is for anchor tag, links to other website -->
 
 </body>
 </html>
