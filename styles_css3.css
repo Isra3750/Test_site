@@ -1,0 +1,169 @@
+/*CSS reset, get rid of default stylesheet*/
+body, ul, li, h1, h2, a{
+    margin: 0; /* strip out any margin and padding by deault */
+    padding: 0;
+    font-family: tahoma; /* change font family */
+}
+p{
+    font-size: 18px;
+}
+
+/* Static position, default position, doesn't do anything */
+/* Relative position, can move postion, up or down, left or right, but actual original space is still there*/
+/* Header class - use fix to fix the header in place for scorlling*/
+header{
+    background-color: #F63232;
+    padding: 12px 0; /* top and bottom, left and right */
+    text-align: center;
+    position: fixed; /* make it fixed */
+    width: 100%; /* cover the entire page length*/
+    top: 0; /* make sure it hit top edges */
+    left: 0; /* make sure it hit left edges */
+    z-index: 1; /*bring header to the front, 0 is default*/
+}
+
+/* change header text to look nice!*/
+header h1{
+    color: white;
+    border: 8px solid white;
+    display: inline-block; /* make it inline block (cause this is a block-level element), basically around text instead of around box */
+    padding: 6px 12px; /* top and bottom, left and right */
+    border-radius: 36px; /* round the border */
+}
+
+/* Banner class */
+.banner {
+    position: relative;
+}
+/* target image inside banner class, change the image size to fit properly*/
+.banner img {
+    max-width: 100%;
+}
+/* Now creating the welcome text in the banner*/
+/* Absolute position (parent must have postion that is not static), can move postion, up or down, left or right - 
+different from relative in that it takes out the original position space*/
+/* Use percentage instead of px to make it responsive*/
+.banner .welcome {
+    background-color: #FEB614;
+    color: white;
+    padding: 30px;
+    position: absolute;
+    top: 25%;
+}
+/* Changing font size inside banner class*/
+.banner h2{
+    font-size: 74px;
+}
+/* Changing span tag inside welcome text inside banner class, use em for relative font size (original class font * 1.3)*/
+.banner h2 span{
+    font-size: 1.3em;
+}
+
+/* nav class, use sticky position - scroll to certain point and stick like a fixed position */
+nav{
+    background: #F4F4F4;
+    padding: 20px;
+    position: sticky; /* to make it stick, need top value as well*/
+    top: 91px; /* stick with 91px, required with sticky position */
+    z-index: 1;
+}
+/* Changing font size inside nav class list*/
+nav ul{
+    white-space: nowrap; /* ensure list is one line only, no wrap around -> with nav li of width 25%*/
+    max-width: 1200px; /* limit the width*/
+    margin: 0 auto; /* zero top and bottom, and auto for left and right which will center it */
+    text-align: center;
+}
+
+/* Changing font size inside nav class list*/
+nav li{
+    width: 25%; /* Normally will be ok for 4 col but need u1 to be 100% width to make it work*/
+    display: inline-block; /* sit next to each other inside list - horitionally instead of vertical*/
+    font-size: 24px;
+}
+
+/* styling the anchor tag*/
+nav li a{
+    text-decoration: none;
+    color: #4B4B4B;
+  }
+  nav li a:hover{ /* change style on hover*/
+    text-decoration: underline;
+  }
+  nav li a.join{ /* different color for first item in list*/
+    color: #F63232;
+  }
+
+/* Main content style */
+main {
+    max-width: 100%; /*max width is 100% of the screen, so it will be responsive for smaller than 1200px*/
+    width: 1200px; /* max width if webpage is more than 1200px, will locked to 1200px*/
+    margin: 80px auto; /* top and bottom, auto for left and right which will center it */
+    padding: 0 40px; /* top and bottom, left and right */
+    box-sizing: border-box; /* include padding and border in width and height */
+}
+
+/* Article style */
+article h2{
+    color: #F63232;
+    font-size: 48px;
+}
+article p{
+    line-height: 2em; /* space between lines, 2x the font size */
+    color: #4B4B4B;
+}
+article p::first-line{ /* change first line style*/
+    font-weight: bold;
+    font-size: 1.2em;
+}
+/* stlying images*/
+.images{
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap; /* ensure list is one line only, no wrap around*/
+}
+.images li{
+    display: inline-block; /* ensure list is one line only, sit next to each other*/
+    list-style-type: none;
+    width: 40%;
+    margin: 10px 5%;
+    position: relative;
+}
+.images li:hover{
+    top: -4px;
+}
+.images li img{
+    max-width: 100%; /* max width is 100% of the screen, OF it's container of 40 percent above*/
+}
+/* stlye join class, before the footer*/
+section.join{
+    background: #F4F4F4;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4B4B4B;
+}
+section.join h2{
+    font-size: 36px;
+}
+/* form style*/
+form input{
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 28px;
+    border: 4px solid white;
+}
+form input:focus{ /* when focus on input, change border style*/
+    border: 4px dashed #4B4B4B;
+    outline: none;
+}
+form input:valid{ /* when valid, change border style*/
+    border: 4px solid #71d300;
+}
+/* footer style */
+footer{
+    background: #F63232;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
