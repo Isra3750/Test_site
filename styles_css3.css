@@ -64,7 +64,7 @@ nav{
     background: #F4F4F4;
     padding: 20px;
     position: sticky; /* to make it stick, need top value as well*/
-    top: 91px; /* stick with 91px, required with sticky position */
+    top: 89px; /* stick with 89px, required with sticky position */
     z-index: 1;
 }
 /* Changing font size inside nav class list*/
@@ -86,13 +86,10 @@ nav li{
 nav li a{
     text-decoration: none;
     color: #4B4B4B;
-  }
-  nav li a:hover{ /* change style on hover*/
-    text-decoration: underline;
-  }
-  nav li a.join{ /* different color for first item in list*/
+}
+nav li a.join{ /* different color for first item in list*/
     color: #F63232;
-  }
+}
 
 /* Main content style */
 main {
@@ -112,10 +109,6 @@ article p{
     line-height: 2em; /* space between lines, 2x the font size */
     color: #4B4B4B;
 }
-article p::first-line{ /* change first line style*/
-    font-weight: bold;
-    font-size: 1.2em;
-}
 /* stlying images*/
 .images{
     text-align: center;
@@ -128,9 +121,6 @@ article p::first-line{ /* change first line style*/
     width: 40%;
     margin: 10px 5%;
     position: relative;
-}
-.images li:hover{
-    top: -4px;
 }
 .images li img{
     max-width: 100%; /* max width is 100% of the screen, OF it's container of 40 percent above*/
@@ -153,13 +143,6 @@ form input{
     border-radius: 28px;
     border: 4px solid white;
 }
-form input:focus{ /* when focus on input, change border style*/
-    border: 4px dashed #4B4B4B;
-    outline: none;
-}
-form input:valid{ /* when valid, change border style*/
-    border: 4px solid #71d300;
-}
 /* footer style */
 footer{
     background: #F63232;
@@ -167,3 +150,58 @@ footer{
     padding: 10px;
     text-align: center;
   }
+
+/* Pseudo classes, like hover and focus, tagging different state of an element */
+/* :hover tag on hover for nav li element*/
+nav li a:hover{ /* change style on hover*/
+    text-decoration: underline;
+    background-color: pink;
+}
+
+.images li:hover{
+    position: relative;
+    top: -4px; /* move minus 4px, so upward*/
+}
+
+form input:focus{ /* when focus on input, change border style*/
+    border: 4px dashed #4B4B4B;
+    outline: none;
+}
+
+form input:valid{ /* when valid, change border style*/
+    border: 4px solid #71d300;
+}
+/* First child styling, used in list, u1 and l1 */
+nav li:first-child{
+    border-right: 1px solid #4B4B4B;
+}
+/* Second child styling */
+nav li:nth-child(2){
+    border-right: 1px solid #4B4B4B;
+}
+/* Last child styling */
+nav li:last-child{
+    border-left: 1px solid #4B4B4B;
+}
+
+/* Pseudo elements like before and after,inject dynamic contect and can also style */
+article p::first-line{ /* change first line style*/
+    font-weight: bold;
+    font-size: 1.2em;
+}
+article p::first-letter{ /* change first letter style*/
+    font-weight: bold;
+    font-size: 1.4em;
+}
+section.join p::first-letter{
+    font-size: 1.4em;
+}
+/* Pseudo class for selected text, change highlight color in this case */
+p::selection{
+    background-color: #F63232;
+    color: #F4F4F4;
+}
+/* add in the end of the every paragraph */
+p::after{
+    content: '...';
+}
