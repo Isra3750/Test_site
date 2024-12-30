@@ -205,3 +205,72 @@ p::selection{
 p::after{
     content: '...';
 }
+
+/* Responsive stlyes, make sure viewport is set in HTML file */
+/* Media queries, media queries are used to apply different styles for different screen sizes*/
+/* Important: Use min width for moblie first approach - easier this way as well for better content management */
+@media screen and (max-width: 1400px){ /* apply to device with screen and below 1400px */
+    /* Change the welcome text inside banner class*/
+    .banner .welcome h2{
+        font-size: 60px;
+    }
+    nav li { /* nav bar change font */
+        font-size: 18px;
+    }
+}
+/* Media queries - again for another even lower size*/
+@media screen and (max-width: 960px){ /* apply to device with screen and below 1400px */
+    /* Change the welcome text inside banner class*/
+    .banner .welcome h2{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 960px){ /* apply to device with screen and below 700px */
+    /* Change the welcome banner to no longer be on picture at this point*/
+    .banner .welcome{
+        position: relative;
+        text-align: center;
+        padding: 10px;
+    }
+    .banner .welcome h2{
+        font-size: 25px;
+    }
+    .banner .welcome br{ /* select BR tag to remove it for one line display*/
+        display: none;
+    }
+    .banner .welcome span { /* remove the span tag size increase*/
+        font-size: 1em;
+    }
+
+    /* stlying images */
+    .images li {
+        width: 100%;
+        margin: 20px auto;
+        display: block; /* Go back to line by line instead of 2 in a row */
+    }
+}
+
+@media screen and (max-width: 560px){
+    /* remove the nav li:first-child (also the other two) stlying for this RWD part*/
+    nav li:first-child,
+    nav li:nth-child(2),
+    nav li:last-child {
+        border: none;
+    }
+    /* change font size in nav bar again*/
+    nav li {
+        font-size: 20px;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+    }
+    header{ /* no longer fix header to top position */
+        position: relative;
+        top: 0;
+    }
+    nav { /* change nav posiiton to top because it's gonna stick higher without header there*/
+        top: 0;
+    }
+}
