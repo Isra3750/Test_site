@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!-- this is for HTML 5 file -->
+<!-- Get Live extension for HTTP Server-->
+<!-- index.html will be the main file -> starting file -->
+ <!-- Pressing tab will auto complete -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- this is for RWD, for device width, required -->
+    <link rel="stylesheet" href="styles.css"> <!-- link to CSS file -->
+    <title>Contact Form</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <!-- Navigation Links -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <!-- Main Content Section -->
+    <main id="contact">
+      <!-- Page Heading -->
+      <h1>Contact Me</h1>
+      <!-- Email Link -->
+      <p>Email: <a href="mailto:israchokwatana@gmail.com">israchokwatana@gmail.com</a></p>
+      <!-- Instruction Text -->
+      <p>Or use the following form...</p>
+  
+      <!-- Contact Form -->
+      <form action="#" method="post">
+        <!-- Form Group for Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name">
+        </div>
+  
+        <!-- Form Group for Surname -->
+        <div class="form-group">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" name="surname" placeholder="Your Surname">
+        </div>
+  
+        <!-- Form Group for Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email">
+        </div>
+  
+        <!-- Form Group for Message -->
+        <div class="form-group message-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  
+    <!-- Footer Section -->
+    <footer>
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <!-- Footer Text -->
+      <p><a href="#">israchokwatana.com</a></p>
+    </footer>
+  </body>
+</html>
