@@ -1,0 +1,61 @@
+/*CSS reset, get rid of default stylesheet*/
+body, ul, li, h1, h2, a{
+  margin: 0; /* strip out any margin and padding by deault */
+  padding: 0;
+  font-family: tahoma; /* change font family */
+}
+p{
+  font-size: 18px;
+}
+
+.main {
+  width: 100%;
+  background: linear-gradient(rgba(255, 218, 218, 0.75),
+   rgb(29, 9, 9, 0.9)), url(img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh; /* 100% of the viewport height */
+  position: relative;
+}
+
+/* navigation bar --------------------------------------- */
+.navbar{ 
+  max-width: 900px; /* max at 800px */
+  display: flex; /* use flexbox for both logo and navbar list */
+  margin: auto;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: space-between; /* space between items */
+}
+
+/* logo */
+.navbar .logo {
+  width: 100px; /* logo width */
+  cursor: pointer; /* this will make the logo clickable */
+}
+
+/* list container */
+ul {
+  margin-top: -4%; /* move the list up */
+}
+
+/* list item */
+ul li {
+  list-style: none; /* remove bullet points */
+  display: inline-block; /* sit next to each other inside list - horizontally instead of vertical*/
+  padding: 10px 16px; /* top and bottom, left and right */
+}
+
+/* link inside list item */
+ul li a {
+  text-decoration: none; /* remove underline */
+  font-weight: bold;
+  color: black; /* text color */
+  font-size: 16px; /* font size */
+  transition: .4s ease; /* transition effect */
+}
+
+/* pseudo class for link inside list item */
+ul li a:hover {
+  color: #520505; /* change color on hover */
+}
