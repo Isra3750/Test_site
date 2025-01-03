@@ -10,8 +10,8 @@ p{
 
 .main {
   width: 100%;
-  background: linear-gradient(rgba(255, 218, 218, 0.75),
-   rgb(29, 9, 9, 0.9)), url(img/background.jpg);
+  background: linear-gradient(rgba(255, 218, 218, 0.9),
+   rgba(49, 5, 5, 0.9)), url(img/background.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh; /* 100% of the viewport height */
@@ -58,4 +58,66 @@ ul li a {
 /* pseudo class for link inside list item */
 ul li a:hover {
   color: #520505; /* change color on hover */
+}
+
+/* info container, text adjustment */
+.info {
+  margin-left: 7%;
+  margin-top: 6%;
+}
+
+.info h1 {
+  font-size: 45px;
+  color: rgb(26, 11, 11)
+}
+
+.info h3{
+  margin: 2px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.info h3 span{
+  font-size: 14px;
+  font-style: italic;
+  padding-left: 20px;
+}
+
+.info a{
+  text-decoration: none;
+  background: rgb(65, 17, 17);
+  color: white;
+  font-weight: bold;
+  margin: 8px 0; /* top and bottom */
+  padding: 10px 26px; /* top and bottom, left and right */
+  border-radius: 28px; /* curved edges */
+  display: inline-block;
+  transition: .3s ease;
+}
+
+.info a:hover {
+  background: #790505;
+  color: white;
+}
+
+/* Image container */
+.image {
+  width: 40%;
+  height: 70%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.image img{
+  position: absolute;
+  height: 130%;
+  left: 40%;
+  transform: translate(-50%);
+  bottom: 0;
+  transition: left 3s ease-in-out;
+}
+
+.image:hover .girl{
+  left: 51%;
 }
