@@ -1,0 +1,58 @@
+/*CSS reset, get rid of default stylesheet*/
+body {
+    margin: 0; /* strip out any margin and padding by deault */
+    padding: 0;
+    font-family: tahoma; /* change font family */
+  }
+
+/* center the div */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* make the items go down one after another, second item is default text stuff */
+  height: 100vh; /* 100% of the viewport height, this will be container be in middle since height of main is now 100vh */
+  background-color: hsl(212, 45%, 89%);
+}
+
+.container{
+    /* center the div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+/* card is for the item inside the container */
+.card {
+  line-height: 10px; /* Centers text inside the div */
+  padding: 15px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  width: 290px;
+}
+
+.qr-code {
+  width: 100%; /* 100% of the container (but there is padding in the container above) */
+  border-radius: 20px;
+}
+
+.card h1 {
+  margin: auto;
+  font-size: 18px;
+  color: hsl(218, 49%, 32%); /* hsl = hue, saturation, lightness */
+  line-height: 1.25em;
+  align-self: center; /* align to the center of the div */
+  padding: 25px 20px 14px 14px; /* top and bottom, left and right */
+}
+
+.card p {
+  font-size: 15px;
+  color: hsl(220, 15%, 55%);
+  line-height: 1.25em;
+  margin: 0 20px 20px 20px;
+  padding: 0 10px;
+}
