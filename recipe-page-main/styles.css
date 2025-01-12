@@ -1,0 +1,174 @@
+/*CSS reset, get rid of default stylesheet*/
+body {
+    margin: 0; /* strip out any margin and padding by deault */
+    padding: 0;
+    font-family: 'Outfit', sans-serif; /* change font family */
+  }
+
+/* flex for the acredits at the bottom and the floating card */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* make the items go down one after another, second item is default text stuff */
+    min-height: 100vh; /* 100% of the viewport height, this will be container be in middle since height of main is now 100vh */
+    background-color: hsl(30, 18%, 87%);
+}
+
+/* container style */
+.container{
+    /* center the div*/
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    margin: 40px auto; /* top and bottom, auto for left and right which will center it */
+    padding: 24px;
+    border-radius: 20px;
+}
+
+/* image style */
+.container img{
+    width: 100%; /* 100% of the container width */
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container p {
+    font-size: 12px;
+}
+
+/* select container and the class, prep time */
+.container .prep_time{
+    padding: 5px 15px; /* top and bottom, left and right */
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 14px;
+    margin-top: 24px;
+}
+
+.container .prep_time h3{
+    color: hsl(332, 51%, 32%);
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.container .prep_time ul {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.container .prep_time ul li {   
+    padding-bottom: 5px;
+}
+
+.container .prep_time ul li::before { /* Change bullet point color before each list item */
+    content: '•';
+    color: hsl(332, 51%, 32%);
+    display: inline-block; /* sit next to each other inside list - horitionally instead of vertical*/
+    width: 2.25em; /* Add spacing between number and text */
+    margin-left: 0.25em; /* Add spacing between number and text */
+}
+
+/* select container and the class, ingredients, and the h3 inside it */
+.container .Ingredients {
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.container .Ingredients h3 {
+    color: hsl(14, 45%, 36%);
+    font-size: 18px;
+}
+
+.container .Ingredients ul {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding-left: 15px;
+    list-style: none;
+}
+
+.container .Ingredients ul li {
+    padding-bottom: 5px;
+}
+
+.container .Ingredients ul li::before { /* Change bullet point color before each list item */
+    content: '•';
+    color: hsl(14, 45%, 36%);
+    display: inline-block; 
+    width: 2.25em;
+    margin-left: 0.25em;
+}
+
+/* Instructions class */
+.container .Instructions {
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.container .Instructions h3 {
+    color: hsl(14, 45%, 36%);
+    font-size: 18px;
+}
+
+.container .Instructions ol {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding-left: 30px; /* Increase padding for spacing */
+}
+
+.container .Instructions ol li {
+    list-style: none;
+    counter-increment: section;
+    padding-bottom: 5px;
+    text-indent: -15px; /* Indent wrapped text */
+    padding-left: 15px; /* Add padding to align text with numbers */
+}
+
+.container .Instructions ol li::before {
+    content: counter(section) '. ';
+    color: hsl(14, 45%, 36%);
+    display: inline-block;
+    width: 1em;
+    margin-right: 3px; /* Add spacing between number and text */
+    font-weight: bold;
+}
+
+/* Nutrition class */
+.container .nutrition {
+    padding-bottom: 10px;
+}
+
+.container .nutrition h3{
+    color: hsl(14, 45%, 36%);
+    font-size: 18px;
+}
+
+.container .nutrition table {
+    font-size: 12px;
+    line-height: 1.5em;
+    width: 100%; /* 100% of the container width, will center the table */
+    border-collapse: collapse; /* Ensure borders are rendered properly, collapase means both cells are combined */
+}
+
+.container .nutrition table tr {
+    border-bottom: 1px solid hsl(30, 18%, 87%); /* Add a light gray line between rows */
+}
+
+.container .nutrition table tr:last-child {
+    border-bottom: none; /* Remove the border for the last row */
+}
+
+.container .nutrition table th,
+.container .nutrition table td {
+    padding: 10px; /* Add some spacing inside table cells for better readability */
+    text-align: left; /* Align the text to the left for a cleaner look */
+}
+
+.container .nutrition table th {
+    color: hsl(14, 45%, 36%); /* Add a light gray background for table headers */
+}
