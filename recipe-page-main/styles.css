@@ -12,7 +12,7 @@ main {
     align-items: center;
     flex-direction: column; /* make the items go down one after another, second item is default text stuff */
     min-height: 100vh; /* 100% of the viewport height, this will be container be in middle since height of main is now 100vh */
-    background-color: hsl(30, 18%, 87%);
+    background-color: hsl(30, 54%, 90%);
 }
 
 /* container style */
@@ -171,4 +171,76 @@ main {
 
 .container .nutrition table th {
     color: hsl(14, 45%, 36%); /* Add a light gray background for table headers */
+}
+
+/* Media queries, media queries are used to apply different styles for different screen sizes*/
+@media screen and (max-width: 680px) {
+    main {
+        background-color: white;
+    }
+    .container {
+        width: 100%;
+        padding: 30px;
+        border-radius: 0; /* Remove rounded corners */
+        margin: 0 auto; /* Center the container */
+        box-sizing: border-box; /* Ensure padding doesn't add to the width */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    
+    .container img {
+        width: 100vw; /* Make image fit within the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 0; /* Remove border radius */
+        margin: -30px -30px 10px; /* left, top, right, bottom */
+    }
+
+    /* Adjust font size for smaller screens - headings */
+    .container h1 {
+        font-size: 48px;
+        margin: 20px auto;
+    }
+
+    .container .prep_time h3 {
+        font-size: 24px;
+    }
+
+    .container .Ingredients h3,
+    .container .Instructions h3,
+    .container .nutrition h3 {
+        font-size: 36px;
+    }
+
+    /* Adjust font size for smaller screens - paragraph tags */
+    .container p {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    /* Adjust font size for smaller screens - list items */
+    .container li {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    .container .Instructions ol li::before {
+        content: counter(section) '. ';
+        color: hsl(14, 45%, 36%);
+        display: inline-block;
+        width: 0.95em;
+        margin-right: 0px; /* change to 0px, to align them */
+        font-weight: bold;
+    }
+
+    /* adjust font size for smaller screens - tables item */
+    .container .nutrition table {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    .container .nutrition table th,
+    .container .nutrition table td {
+        padding: 10px; /* Add some spacing inside table cells for better readability */
+        text-align: left; /* Align the text to the left */
+        padding-left: 25px; /* Offset padding to adjust alignment between left and center */
+    }
 }
