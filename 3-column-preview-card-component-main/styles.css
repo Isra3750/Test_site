@@ -1,0 +1,37 @@
+/* reset margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 95%);
+}
+
+/* center the container, make it 500px and 98vh */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 98vh;
+    width: 800px;
+}
+
+/* card style */
+.container .sedans {
+    padding: 30px;
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0 0 10px; /* top left, top right, bottom right, bottom left */
+    color: white;
+}
+
+.container .suvs {
+    padding: 30px;
+    background-color: hsl(184, 100%, 22%);
+    color: white;
+}
+
+.container .luxury {
+    padding: 30px;
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+    color: white;
+}
