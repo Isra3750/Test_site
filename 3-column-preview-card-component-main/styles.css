@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif; /* font and fallback if not supported */
 }
 
 /* center the container, make it 500px and 98vh */
@@ -12,26 +13,117 @@ body {
     align-items: center;
     margin: 0 auto;
     height: 98vh;
-    width: 800px;
+    width: 820px;
+}
+
+/* spacing and text adjustment*/
+.container p{
+    font-size: 15px;
+    line-height: 1.5em;
+    margin-bottom: 60px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Big Shoulders Display', sans-serif; /* font and fallback if not supported */
+}
+
+.container h1 { /* headings */
+    font-size: 40px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+}
+
+.container span { /* for learn more buttons */
+    font-size: 15px;
+}
+
+.container img {
+    margin: 10px 10px 0px 0px; /* top, right, bottom, left */
 }
 
 /* card style */
 .container .sedans {
-    padding: 30px;
+    padding: 35px;
     background-color: hsl(31, 77%, 52%);
     border-radius: 10px 0 0 10px; /* top left, top right, bottom right, bottom left */
-    color: white;
+    height: 400px;
+}
+
+/* learn more button text style for sedan*/
+.container .sedans .button {
+    color: hsl(31, 77%, 52%);
 }
 
 .container .suvs {
-    padding: 30px;
+    padding: 35px;
     background-color: hsl(184, 100%, 22%);
-    color: white;
+    height: 400px;
+    
+}
+
+/* learn more button text style for suvs*/
+.container .suvs .button {
+    color: hsl(184, 100%, 22%);
 }
 
 .container .luxury {
-    padding: 30px;
+    padding: 35px;
     background-color: hsl(179, 100%, 13%);
     border-radius: 0 10px 10px 0;
-    color: white;
+    height: 400px;
+}
+
+/* learn more button text style for luxury*/
+.container .luxury .button {
+    color: hsl(179, 100%, 13%);
+}
+
+/* learn more styling for all three cards */
+.container .button {
+    display: flex; /* Added to make align-items effective */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    border-radius: 30px;
+    width: 130px; /* width of the button */
+    height: 40px; /* height of the button */
+    background-color: hsl(0, 0%, 95%);
+}
+
+/* media query for smaller screens */
+@media screen and (max-width: 850px) {
+    body {
+        margin: 40px;
+    }
+    .container {
+        display: block;
+        margin: 0 auto;
+        height: 1280px;
+        width: 100%;
+    }
+    /* spacing and text adjustment*/
+    .container p{
+        font-size: 15px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+    .container .sedans {
+        padding: 35px;
+        border-radius: 20px 20px 0 0px; /* top left, top right, bottom right, bottom left */
+        height: 350px;
+    }
+    .container .suvs {
+        padding: 35px;
+        height: 350px;
+    }
+    .container .luxury {
+        padding: 35px;
+        border-radius: 0 0 20px 20px; /* top left, top right, bottom right, bottom left */
+        height: 350px;
+    }
+
+    .attribution {
+        display: block;
+    }
 }
