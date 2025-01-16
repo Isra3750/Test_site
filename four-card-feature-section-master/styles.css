@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* google font */
+
+/* reset margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    /* center the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    margin: 50px auto;
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: hsl(234, 12%, 34%);
+    margin: 10px;
+}
+
+header h2 span {
+    font-weight: bold;
+    color: black;
+}
