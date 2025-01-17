@@ -13,7 +13,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 550px;
+    max-width: 500px;
     margin: 70px auto 15px; /* top, left and right auto, bottom */
     text-align: center; /* center the text */
 }
@@ -22,7 +22,7 @@ header h1 {
     font-size: 30px;
     font-weight: normal;
     color: hsl(234, 12%, 34%);
-    margin: 10px;
+    margin: 0px;
 }
 
 header h1 span {
@@ -38,7 +38,7 @@ header p {
 /* start styling each of the four cards */
 main {
     position: relative;
-    width: 1100px; /* Fixed width to prevent resizing, use max-width for responsive */
+    max-width: 1100px; /* Fixed width to prevent resizing, use max-width for responsive */
     margin: 0 auto; /* Center align main */
 }
 
@@ -81,6 +81,15 @@ main .card1 { /* supervisor card */
     border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
 }
 
+main .card1 img,
+main .card2 img,
+main .card3 img,
+main .card4 img {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
 main .card2 { /* team builder card */
     position: absolute;
     top: 0px;
@@ -96,7 +105,7 @@ main .card3 { /* karma card */
     left: 50%;
     transform: translateX(-50%); /* center the card */
     border-top: 4px solid hsl(34, 97%, 64%);
-    border-radius: 0 0 5px 5px; /* top left, top right, bottom right, bottom left */
+    border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
 }
 
 main .card4 { /* calculator card */
@@ -104,7 +113,7 @@ main .card4 { /* calculator card */
     top: 125px;
     right: 40px;
     border-top: 4px solid hsl(212, 86%, 64%);
-    border-radius: 0 0 5px 5px; /* top left, top right, bottom right, bottom left */
+    border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
 }
 
 /* footer at the bottom of the page */
@@ -113,5 +122,107 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+}
+
+/* media queries for responsive design */
+@media screen and (max-width: 1100px) {
+    main {
+        position: relative;
+        max-width: 750px; /* Fixed width to prevent resizing */
+        height: 750px;
+        margin: 0 auto; /* Center align main */
+    }
+
+    /* adjust card position */
+    main .card1 { /* supervisor card */
+        position: absolute;
+        top: 240px;
+        left: 40px;
+        border-top: 4px solid hsl(180, 62%, 55%);
+        border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
+    }
+    
+    main .card2 { /* team builder card */
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%); /* center the card */
+        border-top: 4px solid hsl(0, 78%, 62%);
+        border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
+    }
+    
+    main .card3 { /* karma card */
+        position: absolute;
+        top: 480px;
+        left: 50%;
+        transform: translateX(-50%); /* center the card */
+        border-top: 4px solid hsl(34, 97%, 64%);
+        border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
+    }
+    
+    main .card4 { /* calculator card */
+        position: absolute;
+        top: 240px;
+        right: 40px;
+        border-top: 4px solid hsl(212, 86%, 64%);
+        border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
+    }
+}
+
+@media screen and (max-width: 750px) {
+    /* header adjustment to responsive design */
+    header {
+        width: 80%;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    /* main adjustment to responsive design */
+    main {
+        width: 100%; /* Full width of the viewport */
+        margin: 0 auto; /* Center the container */
+        height: 1000px;
+    }
+
+    /* adjust card position */
+    main .card1 { /* supervisor card */
+        position: static;
+        margin: auto;
+        align-self: auto;
+        border-top: 4px solid hsl(180, 62%, 55%);
+        border-radius: 5px 5px 0 0; /* top left, top right, bottom right, bottom left */
+        margin-bottom: 30px;
+    }
+    
+    main .card2 { /* team builder card */
+        position: static;
+        margin: auto;
+        transform: translateX(0%); /* remove the translateX to center the card */
+        margin-bottom: 30px;
+    }
+    
+    main .card3 { /* karma card */
+        position: static;
+        margin: auto;
+        transform: translateX(0%); /* remove the translateX to center the card */
+        margin-bottom: 30px;
+    }
+    
+    main .card4 { /* calculator card */
+        position: static;
+        margin: auto;
+    }
+
+    /* Reset image styles to align within the cards */
+    main .card1 img,
+    main .card2 img,
+    main .card3 img,
+    main .card4 img {
+        position: static; /* Remove absolute positioning */
+        margin: 20px 20px 0px 210px; /* top, right, bottom, left */
+        display: block; /* Ensure the image is treated as a block element */
+    }
 }
