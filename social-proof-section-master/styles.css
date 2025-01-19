@@ -121,3 +121,36 @@ main .Anne-review p {
     margin-top: 20px;
 }
 
+@media screen and (min-width: 430px) {
+    body {
+        max-width: 1000px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .intro {
+        width: 350px;
+        text-align: left;
+    }
+
+    header .ratings {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+        width: 450px;
+    }
+
+    /* make stars and text inline */
+    header .ratings .rating1,
+    header .ratings .rating2,
+    header .ratings .rating3 {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 30px;
+    }
+
+}
