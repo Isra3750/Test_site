@@ -2,18 +2,18 @@
 
 /* reset margin and padding and font */
 body {
-    /* center the container */
-    margin: 0 auto; /* center the container */
+    /* Center the container and define layout */
+    margin: 0 auto;
     padding: 30px;
-    max-width: calc(430px - 60px); /* Fixed width to prevent resizing for moblie, minus padding */
+    max-width: 440px; /* Fixed width for mobile, accounting for padding */
 
-    /* google font */
+    /* Typography */
     font-family: 'League Spartan', sans-serif;
 
-    /* background images */
-    background: url(images/bg-pattern-top-mobile.svg) 0 0/100% 15%, url(images/bg-pattern-bottom-mobile.svg) 0 100%/100% 15%; /* allow stretching */
-    background-repeat: no-repeat; /* no repeat */
-    background-position: top, bottom; /* top left, top right, bottom right, bottom left */
+    /* Background styling */
+    background: 
+        url(images/bg-pattern-top-mobile.svg) top/100% 15% no-repeat, /* top/100% is width meaning 100%, 15% is height meaning 15% of the viewport */
+        url(images/bg-pattern-bottom-mobile.svg) bottom/100% 15% no-repeat;
 }
 
 
@@ -45,7 +45,7 @@ header .rating1,
 header .rating2,
 header .rating3 {
     background-color: hsl(300, 24%, 96%);
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
 }
 
@@ -121,26 +121,37 @@ main .Anne-review p {
     margin-top: 20px;
 }
 
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 740px) {
     body {
-        max-width: 1000px;
+        max-width: 1100px;
+        background: 
+            url(images/bg-pattern-top-desktop.svg) top left/55% no-repeat, 
+            url(images/bg-pattern-bottom-desktop.svg) bottom right/55% no-repeat;
+        background-attachment: fixed;
     }
     header {
         display: flex;
         justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    header h1 {
+        margin: 20px 0 20px 0; /* top, right, bottom, left, reset margin for desktop */
+        font-size: 50px;
     }
 
     header .intro {
-        width: 350px;
+        width: 400px;
         text-align: left;
     }
 
+    /* change to flex for header ratings class */
     header .ratings {
         display: flex;
         flex-direction: column;
         gap: 20px;
         margin-top: 30px;
-        width: 450px;
+        width: 550px;
     }
 
     /* make stars and text inline */
@@ -153,4 +164,43 @@ main .Anne-review p {
         gap: 30px;
     }
 
+    /* perform a offset for each rating class using margins */
+    header .ratings .rating1 {
+        margin-left: 50px;
+        margin-right: 100px;
+    }
+
+    header .ratings .rating2 {
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+
+    header .ratings .rating3 {
+        margin-left: 150px;
+    }
+
+    /* Change to flex for row of reviews */
+    main {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 80px;
+    }
+
+    /* perform a offset for each review class using transform */
+    main .Colton-review {
+        transform: translateY(-20px);
+    }
+
+    main .Anne-review {
+        transform: translateY(20px);
+    }
+
+    /* footer at the bottom of the page */
+    .attribution {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
