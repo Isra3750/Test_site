@@ -1,0 +1,5 @@
+body {
+    background: url(images/bg-mobile.png) top/100% no-repeat;
+    background-color: aqua; /* for testing */
+    margin: 0 auto;
+}
