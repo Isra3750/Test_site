@@ -1,5 +1,65 @@
 body {
-    background: url(images/bg-mobile.png) top/100% no-repeat;
-    background-color: aqua; /* for testing */
-    margin: 0 auto;
+    //background: url(images/bg-mobile.png) top/100% no-repeat;
+    background-color: gray; /* for testing */
+    margin: 0;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 98%; /* 98% of the viewport height */
+}
+
+header {
+    text-align: left;
+    background-color: hsl(228, 56%, 26%);
+    /* fixed width for mobile, accounting for padding */
+    /*
+    max-width: 400px will not work as it will prevent the header from taking up the full width of the screen
+    when the screen is larger than 400px. So we use % instead to set the width relative to the viewport.
+    */
+    width: 350px;
+    max-width: 100%; 
+    padding: 40px;
+    box-sizing: border-box; /* include padding and border in width and height */
+    border-radius: 15px 80px 15px 15px; /* top left, top right, bottom right, bottom left */
+}
+
+/* target the image with alt attribute of "logo" */
+header img[alt="logo"] {
+    padding-bottom: 30px;
+}
+
+/* target each icons inside logo_item class */
+header .logo_items img {
+    background-color: hsl(229, 57%, 11%);
+    padding: 10px;
+    /* use box-sizing to include padding in the width */
+    box-sizing: border-box;
+
+    width: 50px; /* fixed width for padding box */
+    height: 50px; /* fixed height for padding box */
+    margin-right: 10px; /* space between icons */
+
+    object-fit: none; /* make sure img is not transform (eg. strech) */
+    border-radius: 10px;
+}
+
+main {
+    width: 350px;
+    max-width: 100%; 
+    background-color: hsl(228, 56%, 26%);
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 40px;
+    box-sizing: border-box; /* include padding and border in width and height */
+}
+
+/* footer at the bottom of the page */
+.attribution {
+    position: relative;
+    margin-top: 0px;
 }
