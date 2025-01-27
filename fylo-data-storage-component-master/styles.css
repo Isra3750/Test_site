@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    //background: url(images/bg-mobile.png) top/100% no-repeat;
-    background-color: gray; /* for testing */
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
     margin: 0;
     height: 100vh; /* Ensure the body takes up the full viewport height */
     font-family: "Raleway", serif;
@@ -93,6 +95,15 @@ main .circle {
     margin-right: 2px;
     margin-top: 2px;
 }
+/* remove margin for paragraph with class storage-used */
+main .storage-used {
+    margin-top: 0px;
+}
+
+/* add bold to span tag in storage-used */
+main .storage-used span {
+    font-weight: bold;
+}
 
 /* 0, 1000GB in the below-bar section */
 main .below-bar {
@@ -100,6 +111,7 @@ main .below-bar {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /* text customization */
@@ -108,17 +120,30 @@ main .box1 {
     text-align: center;
 }
 
-main .box1 p:first-child { /* target the first p tag */
-    margin-top: 0;
-}
-
 /* white box section */
 section {
-    width: 200px;
+    width: 170px;
     background-color: white;
     text-align: center;
     border-radius: 15px;
 }
+section .box2 p{
+    color: hsl(229, 7%, 55%);
+    margin: 15px auto;
+    font-weight: bold;
+}   
+section .box2 span {
+    color: black;
+    font-size: 40px;
+    margin-right: 6px; /* add some space between span tag and the following item in the p tag */
+}
+
+/* shift location of white box section upwards */
+section {
+    position: relative;
+    top: -40px;
+}
+
 /* footer at the bottom of the page */
 .attribution {
     position: relative;
