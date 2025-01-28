@@ -120,19 +120,35 @@ main .box1 {
     text-align: center;
 }
 
+.content-wrapper {
+    position: relative; /* Establish relative positioning context */
+    display: inline-block; /* Prevent the section from stacking below main */
+}
+
 /* white box section */
 section {
-    width: 170px;
+    width: 100%; /* full width of the container */
+    max-width: 170px; /* maximum width of the section */
+    height: 70px;
     background-color: white;
-    text-align: center;
     border-radius: 15px;
+
+    /* center the section elementhorizontally based on the container */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* center the text inside the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-section .box2 p{
+section p {
     color: hsl(229, 7%, 55%);
-    margin: 15px auto;
+    margin: 0;
     font-weight: bold;
 }   
-section .box2 span {
+section span {
     color: black;
     font-size: 40px;
     margin-right: 6px; /* add some space between span tag and the following item in the p tag */
@@ -148,4 +164,48 @@ section {
 .attribution {
     position: relative;
     margin-top: 0px;
+}
+
+/* media queries for desktop*/
+@media screen and (min-width: 1000px) {
+    /* change background to be desktop bg */
+    body {
+        background: hsl(229, 57%, 11%);
+        background-image: url(images/bg-desktop.png);
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-position: center bottom; /* bottom align the image */
+        background-size: 100% 50%; /* Stretch to fit the width, maintain 50% of the height */
+    } 
+
+    /* adjust the width of the container */
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 98%; /* 98% of the viewport height */
+        gap: 25px;
+    }
+    /* adjust the main section width */
+    main {
+        width: 550px;
+        padding: 40px;
+        box-sizing: border-box; /* include padding and border in width and height */
+        border-radius: 15px; /* top left, top right, bottom right, bottom left */
+        /* adjust item size */
+        height: 150px;
+        margin-top: calc(208px - 150px);
+    }
+
+    main .box1 .storage-used { /* adjust text location to be left */
+        text-align: left;
+    }
+
+    /* change the white box section to be on top of the main section */
+    /* use absolute positioning to move the white box and replace it's own space*/
+    section {
+        position: absolute;
+        top: 10px;
+        left: 420px;
+    }
 }
