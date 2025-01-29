@@ -31,7 +31,7 @@ header {
     max-width: 100%; 
     padding: 40px;
     box-sizing: border-box; /* include padding and border in width and height */
-    border-radius: 15px 80px 15px 15px; /* top left, top right, bottom right, bottom left */
+    border-radius: 15px 100px 15px 15px; /* top left, top right, bottom right, bottom left */
 }
 
 /* target the image with alt attribute of "logo" */
@@ -207,5 +207,17 @@ section {
         position: absolute;
         top: 10px;
         left: 420px;
+        border-radius: 15px 15px 0 15px; /* top left, top right, bottom right, bottom left */
+    }
+
+    /* create triangular tail for the white box section, use section::after for the pseudo element */
+    section::after {
+        content: '';
+        position: absolute;
+        top: 100%; /* Adjusts the triangle position */
+        left: 146px; /* Adjusts the horizontal alignment of the triangle */
+        border-width: 12px;
+        border-style: solid;
+        border-color: white white transparent transparent;
     }
 }
