@@ -30,14 +30,45 @@ main {
     gap: 20px;
 }
 
-/*image styling*/
+/*image styling for star icon*/
 .container .FAQ img {
-    width: 6%;
-    height: auto;
+    width: 30px;
+    height: 30px;
 }
 
 .Expand-collapse {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+/* make the question and expanding icon on same line */
+.Expand-collapse .block1 .question, 
+.Expand-collapse .block2 .question,
+.Expand-collapse .block3 .question,
+.Expand-collapse .block4 .question  {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+/* image styling for plus icon*/
+.Expand-collapse img {
+    width: 40px;
+    height: 40px;
+}
+
+/* button styling */
+.Expand-collapse button {
+    border: none;
+    background-color: inherit; /* inherit the parent's background color */
+    cursor: pointer;
+}
+
+/* content class, this will interact with the button (via JS as well)*/
+.content {
+    display: none;
+}
+
+.active, .Expand-collapse button:hover {
+    color: hsl(14, 88%, 65%);
 }
