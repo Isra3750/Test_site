@@ -4,6 +4,7 @@ let collapsible = document.getElementsByClassName("collapsible");
 // Loop through all collapsible elements
 for (let i = 0; i < collapsible.length; i++) {
     // event listener is basically for click, mouseover, mouseout, etc. let's add them to the collapsible elements
+    // "This" keyword refers to the current element which is <button class="collapsible">
     collapsible[i].addEventListener("click", function() {
         // Toggle the "active" class to change button style
         this.classList.toggle("active");
