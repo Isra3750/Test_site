@@ -24,7 +24,7 @@ main {
 .container {
     /*decorations*/
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -43,6 +43,11 @@ main {
 .container .FAQ img {
     width: 30px;
     height: 30px;
+}
+
+.container .FAQ h1 {
+    font-size: 32px;
+    margin: 10px 0px 10px 0; /* top, right, bottom, left */
 }
 
 /* Expand-collapse styling */
@@ -68,7 +73,7 @@ main {
     color: hsl(292, 42%, 14%);
 }
 
-/* change color for p tags inside blocks */
+/* change styling for p tags inside blocks */
 .Expand-collapse .block1 .content p,
 .Expand-collapse .block2 .content p,
 .Expand-collapse .block3 .content p,
@@ -81,11 +86,11 @@ main {
 
 /* image styling for plus icon*/
 .Expand-collapse img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
 }
 
-/* button styling */
+/* button styling - hide it */
 .Expand-collapse button {
     border: none;
     background-color: inherit; /* inherit the parent's background color */
@@ -100,7 +105,9 @@ main {
 
 /* content class, this will interact with the button (via JS as well)*/
 .content {
-    display: none;
+    max-height: 0; /* initially hidden */
+    overflow: hidden; /* hide overflowing content */
+    transition: max-height 0.2s ease-out; /* smooth transition */
 }
 
 /* attribution class fix to the bottom of the page */
@@ -109,4 +116,41 @@ main {
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+/* media queries, change at 600px */
+@media screen and (min-width: 600px) {
+    /* background for desktop */
+    body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+        background-size: 100%; /* Stretch to fit */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-position: center top; /* bottom align the image */
+    }
+    
+    main {
+        max-width: 520px; /* change to 520px */
+    }
+    /*image styling for star icon*/
+    .container .FAQ img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container .FAQ h1 {
+        font-size: 46px;
+        margin: 20px 0px 20px 0; /* top, right, bottom, left */
+    }
+
+    /* change styling for p tags inside blocks */
+    .Expand-collapse .block1 .content p,
+    .Expand-collapse .block2 .content p,
+    .Expand-collapse .block3 .content p,
+    .Expand-collapse .block4 .content p {
+        color: hsl(292, 16%, 49%);
+        font-size: 15px;
+        padding-right: 15px;
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
 }

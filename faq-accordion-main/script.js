@@ -16,11 +16,11 @@ for (let i = 0; i < collapsible.length; i++) {
         let img = this.querySelector("img");
 
         // If the content is visible, hide it, else show it
-        if (content.style.display === "block") {
-            content.style.display = "none";
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null; // Hide content
             img.src = "./assets/images/icon-plus.svg";  // Change back to plus icon
         } else {
-            content.style.display = "block";
+            content.style.maxHeight = content.scrollHeight + "px"; // Show content
             img.src = "./assets/images/icon-minus.svg"; // Change to minus icon
         }
     });
