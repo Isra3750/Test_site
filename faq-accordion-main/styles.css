@@ -36,6 +36,7 @@ main {
     display: flex;
     align-items: center;
     gap: 20px;
+    color: hsl(292, 42%, 14%);
 }
 
 /*image styling for star icon*/
@@ -64,6 +65,18 @@ main {
     justify-content: space-between;
     align-items: left;
     gap: 30px;
+    color: hsl(292, 42%, 14%);
+}
+
+/* change color for p tags inside blocks */
+.Expand-collapse .block1 .content p,
+.Expand-collapse .block2 .content p,
+.Expand-collapse .block3 .content p,
+.Expand-collapse .block4 .content p {
+    color: hsl(292, 16%, 49%);
+    font-size: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
 }
 
 /* image styling for plus icon*/
