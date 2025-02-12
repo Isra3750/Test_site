@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: hsl(148, 38%, 91%);
+    font-family: Karla, sans-serif;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}

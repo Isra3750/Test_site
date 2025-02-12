@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -15,34 +16,37 @@
   </style>
 </head>
 <body>
+  <form>
+    <h1>Contact Us</h1>
+    <label for ="Firstname">First Name: </label>
+    <input type="text" id="Firstname" name="Firstname" placeholder="This field is required" required>
 
-  Contact Us
+    <label for ="Lastname">Last Name: </label>
+    <input type="text" id="Lastname" name="Lastname" placeholder="This field is required" required>
+    <br>
 
-  First Name
-  This field is required
+    <label for ="Email">Email Address: </label>
+    <input type="text" id="Email" name="Email" placeholder="Please enter a valid email address" required>
+    <br>
+    <p>Query Type</p>
+    <!-- keep name same so that only one can be selected, value field is for backend validation-->
+    <input type="radio" id="option-1" name="op" value="1" required>
+    <label for="option-1">General Enquiry</label>
+    <input type="radio" id="option-2" name="op" value="2" required>
+    <label for="option-2">Support Request</label>
+    <br>
 
-  Last Name
-  This field is required
+    <label for = "Message"> Message: </label> <br>
+    <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message..."></textarea>
+    <br>
+    
+    <input type="checkbox" id="constent" name="constent" value="1" required>
+    <label for="constent">I consent to being contacted by the team</label>
+    <br>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <input type="submit" value="Submit">
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
+    <script src="script.js"></script> <!-- Script for validation -->
+  </form>
 </body>
 </html>
