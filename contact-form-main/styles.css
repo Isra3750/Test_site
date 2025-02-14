@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     background-color: hsl(148, 38%, 91%);
     font-family: Karla, sans-serif;
@@ -12,11 +12,71 @@ body {
 
 form {
     background-color: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
-    width: 350px;
+    width: 320px;
+    box-sizing: border-box; /* include padding and border in width and height */
+    margin: 20px 0px 20px 0px;
 
     display: flex;
     flex-direction: column;
     align-items: left;
+}
+/* title style */
+h1 {
+    margin-top: 0px;
+}
+/* text box styling */
+.names input, .phone input, .message textarea {
+    width: 100%;
+    box-sizing: border-box; /* include padding and border in width and height */
+    padding: 10px;
+    margin: 5px 0px 15px 0px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+}
+
+/* Query type style -> Query type title*/
+.select0 {
+    margin: 5px 0px 10px 0px;
+}
+
+/* Query type style -> radio button*/
+.select1, .select2 {
+    width: 100%;
+    box-sizing: border-box; /* include padding and border in width and height */
+    padding: 10px;
+    margin: 5px 0px 5px 0px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+}
+
+/* text box styling */
+.message {
+    margin: 15px 0px 15px 0px;
+}
+.message textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+/* tick box style */
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px 15px 0px;
+}
+
+.contact label {
+    margin-left: 10px; /* Adjust as needed to position text to the right of the checkbox */
+}
+
+  /* select the submit button */
+input[type="submit"] {
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
