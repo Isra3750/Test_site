@@ -46,7 +46,7 @@ h1 {
     width: 100%;
     box-sizing: border-box; /* include padding and border in width and height */
     padding: 10px;
-    margin: 5px 0px 5px 0px;
+    margin: 10px 0px 5px 0px;
     border: 1px solid hsl(186, 15%, 59%);
     border-radius: 5px;
 }
@@ -80,3 +80,46 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
 }
+
+/* color the * in each label */
+span {
+    color: hsl(169, 82%, 27%);
+}
+
+@media screen and (min-width: 850px) {
+    form {
+        width: 600px;
+    }
+    /* make so that first and last name are on same row and have equal space */
+    .names {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+    }
+    .first, .last {
+        flex: 1; /* Make both divs take equal space */
+        width: 50%; /* Ensure each takes half */
+    }
+    .first input, .last input {
+        width: 100%; /* Ensure input fields take full width of their parent */
+    }
+
+    /* make so that query type are on same row and have equal space */
+    .select {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .select1, .select2 {
+        flex: 1; /* Make both divs take equal space */
+        width: 50%; /* Ensure each takes half */
+    }
+
+    /* adjust message box a little */
+    .message textarea {
+        height: 120px;
+    }
+}   

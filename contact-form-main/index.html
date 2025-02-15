@@ -19,35 +19,41 @@
   <form>
     <h1>Contact Us</h1>
     <section class = "names">
-      <label for ="Firstname">First Name: </label> <br>
-      <input type="text" id="Firstname" name="Firstname" placeholder="This field is required" required> <br>
-      <label for ="Lastname">Last Name: </label> <br>
-      <input type="text" id="Lastname" name="Lastname" placeholder="This field is required" required>
+      <div class = "first">
+        <label for ="Firstname">First Name <span>*</spans></label> <br>
+        <input type="text" id="Firstname" name="Firstname" required> <br> <!-- Can add placeholder if want text inside-->
+      </div>
+      <div class = "last">
+        <label for ="Lastname">Last Name <span>*</spans></label> <br>
+        <input type="text" id="Lastname" name="Lastname" required>
+      </div>
     </section>
     <section class = "phone">
-      <label for ="Email">Email Address: </label> <br>
-      <input type="text" id="Email" name="Email" placeholder="Please enter a valid email address" required>
+      <label for ="Email">Email Address <span>*</spans></label> <br>
+      <input type="text" id="Email" name="Email" required>
     </section>
     
-    <p class = "select0">Query Type</p>
+    <p class = "select0">Query Type <span>*</spans></p>
     <!-- keep name same so that only one can be selected, value field is for backend validation-->
-     <section class = "select1">
-      <input type="radio" id="option-1" name="op" value="1" required>
-      <label for="option-1">General Enquiry</label>
-     </section>
-     <section class = "select2">
-      <input type="radio" id="option-2" name="op" value="2" required>
-      <label for="option-2">Support Request</label>
-     </section>
+    <div class = "select">
+      <section class = "select1">
+        <input type="radio" id="option-1" name="op" value="1" required>
+        <label for="option-1">General Enquiry</label>
+      </section>
+      <section class = "select2">
+        <input type="radio" id="option-2" name="op" value="2" required>
+        <label for="option-2">Support Request</label>
+      </section>
+     </div>
 
     <section class = "message">
-      <label for = "Message"> Message: </label> <br>
-      <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message..."></textarea>
+      <label for = "Message"> Message <span>*</spans></label> <br>
+      <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Type your message here"></textarea>
     </section>
     
     <section class = "contact">
       <input type="checkbox" id="constent" name="constent" value="1" required>
-      <label for="constent">I consent to being contacted by the team</label>
+      <label for="constent">I consent to being contacted by the team <span>*</spans></label>
     </section>
     <input type="submit" value="Submit">
 
