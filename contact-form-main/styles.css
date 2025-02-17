@@ -86,6 +86,12 @@ span {
     color: hsl(169, 82%, 27%);
 }
 
+/* sweet alert button customize -> swal stylesheet was link via index.html*/
+.swal2-confirm {
+    background-color: hsl(169, 82%, 27%) !important;
+    /*color: aquamarine !important;*/
+}
+
 @media screen and (min-width: 850px) {
     form {
         width: 600px;

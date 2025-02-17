@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">--> <!-- Sweet alert for custom alert for CSS customize-->
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -29,8 +30,8 @@
       </div>
     </section>
     <section class = "phone">
-      <label for ="Email">Email Address <span>*</span></label> <br>
-      <input type="text" id="Email" name="Email" required>
+      <label for ="email">Email Address <span>*</span></label> <br>
+      <input type="email" id="email" name="email" required>
     </section>
     
     <p class = "select0">Query Type <span>*</span></p>
@@ -57,6 +58,7 @@
     </section>
     <input type="submit" value="Submit">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Sweet alert for custom alert -->
     <script src="script.js"></script> <!-- Script for validation -->
   </form>
 </body>
