@@ -4,7 +4,7 @@ form.addEventListener("submit", function(event) { // Event listener for form sub
   event.preventDefault(); // Prevent default form submission before JS logic runs
 
   //Custom validation
-  const email = document.getElementById("email").value;
+  const email = document.getElementById("email").value; //.value is for getting the value of the input
   const msg = document.getElementById("Message").value;
 
   // Email validation

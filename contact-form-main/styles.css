@@ -36,6 +36,15 @@ h1 {
     border-radius: 5px;
 }
 
+.names input:hover, .phone input:hover, .message textarea:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+.names input:focus, .phone input:focus, .message textarea:focus {
+    border: 2px solid hsl(169, 82%, 27%);
+    outline: none !important; /* Remove default black outline */
+}
+
 /* Query type style -> Query type title*/
 .select0 {
     margin: 5px 0px 10px 0px;
@@ -49,6 +58,10 @@ h1 {
     margin: 10px 0px 5px 0px;
     border: 1px solid hsl(186, 15%, 59%);
     border-radius: 5px;
+}
+
+.select1:hover, .select2:hover {
+    border: 1px solid hsl(169, 82%, 27%);
 }
 
 /* text box styling */
@@ -89,7 +102,7 @@ span {
 /* sweet alert button customize -> swal stylesheet was link via index.html*/
 .swal2-confirm {
     background-color: hsl(169, 82%, 27%) !important;
-    /*color: aquamarine !important;*/
+    /*color: aquamarine !important;*/ /* text color */
 }
 
 @media screen and (min-width: 850px) {

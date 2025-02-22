@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Flask test</title>
+</head>
+<body>
+    <h1>Home page</h1>
+    <p>{{content}}</p> <!-- jinja2 syntax -->
+    <p>{{r}}</p>
+    <!-- You can write python inside html, this is getting value from flask "more" element which is a list-->
+    {% for x in more %}
+        <p>{{x}}</p>
+        <!-- Can also add else block-->
+        
+    {% endfor %}
+</body>
+</html>

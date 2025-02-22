@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title> <!-- this block title is for template inheritance-->
+</head>
+<body>
+    <h1>My Website!</h1>
+    <h2 style="color:red; background-color: aqua;">Content1, Content2</h2>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
