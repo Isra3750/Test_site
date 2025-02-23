@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: hsl(148, 38%, 91%);
+    font-family: Karla, sans-serif;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    box-sizing: border-box; /* include padding and border in width and height */
+    margin: 20px 0px 20px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+/* title style */
+h1 {
+    margin-top: 0px;
+}
+/* text box styling */
+.names input, .phone input, .message textarea {
+    width: 100%;
+    box-sizing: border-box; /* include padding and border in width and height */
+    padding: 10px;
+    margin: 5px 0px 15px 0px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+}
+
+.names input:hover, .phone input:hover, .message textarea:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+.names input:focus, .phone input:focus, .message textarea:focus {
+    border: 2px solid hsl(169, 82%, 27%);
+    outline: none !important; /* Remove default black outline */
+}
+
+/* Query type style -> Query type title*/
+.select0 {
+    margin: 5px 0px 10px 0px;
+}
+
+/* Query type style -> radio button*/
+.select1, .select2 {
+    width: 100%;
+    box-sizing: border-box; /* include padding and border in width and height */
+    padding: 10px;
+    margin: 10px 0px 5px 0px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+}
+
+.select1:hover, .select2:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+/* text box styling */
+.message {
+    margin: 15px 0px 15px 0px;
+}
+.message textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+/* tick box style */
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px 15px 0px;
+}
+
+.contact label {
+    margin-left: 10px; /* Adjust as needed to position text to the right of the checkbox */
+}
+
+  /* select the submit button */
+input[type="submit"] {
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* color the * in each label */
+span {
+    color: hsl(169, 82%, 27%);
+}
+
+/* sweet alert button customize -> swal stylesheet was link via index.html*/
+.swal2-confirm {
+    background-color: hsl(169, 82%, 27%) !important;
+    /*color: aquamarine !important;*/ /* text color */
+}
+
+@media screen and (min-width: 850px) {
+    form {
+        width: 600px;
+    }
+    /* make so that first and last name are on same row and have equal space */
+    .names {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+    }
+    .first, .last {
+        flex: 1; /* Make both divs take equal space */
+        width: 50%; /* Ensure each takes half */
+    }
+    .first input, .last input {
+        width: 100%; /* Ensure input fields take full width of their parent */
+    }
+
+    /* make so that query type are on same row and have equal space */
+    .select {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .select1, .select2 {
+        flex: 1; /* Make both divs take equal space */
+        width: 50%; /* Ensure each takes half */
+    }
+
+    /* adjust message box a little */
+    .message textarea {
+        height: 120px;
+    }
+}   

@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <!--<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">-->
-  <link rel="stylesheet" href="styles.css">
-  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">--> <!-- Sweet alert for custom alert for CSS customize-->
+  <link rel="stylesheet" href="{{url_for('static', filename = 'styles.css')}}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> <!-- Sweet alert for custom alert for CSS customize-->
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -59,7 +58,7 @@
     <input type="submit" value="Submit">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Sweet alert for custom alert -->
-    <script src="script.js"></script> <!-- Script for validation -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script> <!-- Script for validation -->
   </form>
 </body>
 </html>
